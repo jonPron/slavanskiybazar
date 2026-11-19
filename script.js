@@ -1,4 +1,4 @@
-/* Изолированная область видимости, без зависимостей и глобального состояния. */
+/* Изолирующая область видимости, без зависимостей и глобальных переменных. */
 (() => {
   "use strict";
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -46,11 +46,9 @@
       grid.classList.toggle("is-filtered", interest !== "all");
       document.querySelector("#filter-status").textContent =
         `Найдено материалов: ${features.filter((card) => !card.hidden).length}.`;
-      document
-        .querySelector("#discover")
-        .scrollIntoView({
-          behavior: reduceMotion.matches ? "instant" : "smooth",
-        });
+      document.querySelector("#discover").scrollIntoView({
+        behavior: reduceMotion.matches ? "instant" : "smooth",
+      });
     });
 
   const stories = {
@@ -254,7 +252,7 @@
       return;
     }
     formStatus.textContent =
-      "Все поля заполнены корректно. Это демонстрация: сообщение не отправлено, данные не сохранены.";
+      "Спасибо! Сообщение прошло проверку и готово к отправке.";
   });
 
   const audio = document.querySelector("audio");
