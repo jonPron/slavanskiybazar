@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="История Славянского базара в Витебске: фестивальные площадки, фотогалерея и музыка международного фестиваля искусств."
+    />
+    <meta name="theme-color" content="#4351cf" />
+    <title>Славянский базар в Витебске — история, которая звучит</title>
+    <link rel="icon" href="img/flower.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+    <header class="header" id="top">
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="Славянский базар — на главную"
+          ><img src="img/flower.svg" alt="" width="38" height="38" /><span
+            >Славянский<span class="brand-bottom"
+              >базар<span class="brand-dot">.</span></span
+            ></span
+          ></a
+        >
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-controls="navigation"
+          aria-expanded="false"
+          aria-label="Открыть меню"
+        >
+          ☰
+        </button>
+        <nav id="navigation" class="navigation" aria-label="Основная навигация">
+          <a href="#about" class="active">О фестивале</a
+          ><a href="#discover">Открыть Витебск</a><a href="#history">История</a
+          ><a href="#gallery">Галерея</a
+          ><a class="button button-small" href="#contact"
+            >Задать вопрос <span aria-hidden="true">↗</span></a
+          >
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <!-- Двухколоночный первый экран и поисковая панель повторяют композицию макета. -->
+      <section class="hero container" id="about" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="little-line"></span> МЕЖДУНАРОДНЫЙ ФЕСТИВАЛЬ ИСКУССТВ
+          </p>
+          <h1 id="hero-title">
+            Славянский<br /><span>базар</span
+            ><span class="hero-location">в Витебске</span>
+          </h1>
+          <p class="hero-description">
+            Целый город. Тысячи голосов. Один язык — искусство. Откройте историю
+            фестиваля, который объединяет людей и превращает лето в незабываемую
+            встречу.
+          </p>
+          <a class="button" href="#discover"
+            >Открыть фестиваль <span aria-hidden="true">↗</span></a
+          >
+          <dl class="stats">
+            <div>
+              <dt><span aria-hidden="true">✧</span> 1992</dt>
+              <dd>год первого фестиваля</dd>
+            </div>
+            <div>
+              <dt><span aria-hidden="true">◎</span> Витебск</dt>
+              <dd>город, который объединяет</dd>
+            </div>
+            <div>
+              <dt><span aria-hidden="true">♫</span> Искусство</dt>
+              <dd>наш общий язык</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-photo">
+            <img
+              src="img/main4.webp"
+              alt="Зрители и освещённая сцена Славянского базара в Летнем амфитеатре"
+              width="1400"
+              height="933"
+              fetchpriority="high"
+            />
+          </div>
+          <span class="photo-tag"
+            ><span class="live-dot"></span> Здесь рождаются воспоминания</span
+          >
+          <div class="hero-note">
+            <span class="note-flower" aria-hidden="true">✳</span
+            ><span
+              >Через искусство —<br /><strong
+                >к миру и взаимопониманию</strong
+              ></span
+            >
+          </div>
+          <span class="visual-number" aria-hidden="true">01 / ВИТЕБСК</span>
+        </div>
+      </section>
+
+      <form
+        class="discovery-bar container"
+        id="discovery-form"
+        aria-label="Подбор материалов"
+      >
+        <div class="discovery-intro">
+          <span class="filter-icon" aria-hidden="true">⌘</span
+          ><span
+            ><strong>Ваше знакомство с фестивалем</strong
+            ><small>Начните с того, что вам ближе</small></span
+          >
+        </div>
+        <label
+          ><span>Что интересно?</span
+          ><select id="interest">
+            <option value="all">Весь фестиваль</option>
+            <option value="music">Музыка и сцена</option>
+            <option value="city">Город и культура</option>
+          </select></label
+        >
+        <button class="button" type="submit">
+          Найти вдохновение <span aria-hidden="true">→</span>
+        </button>
+      </form>
+
+      <section
+        class="section container"
+        id="discover"
+        aria-labelledby="discover-title"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">МНОГО ГОЛОСОВ. ОДНА ИСТОРИЯ.</p>
+            <h2 id="discover-title">Пять граней фестиваля</h2>
+          </div>
+          <p>Выберите свой маршрут<br />в мир Славянского базара.</p>
+        </div>
+        <p class="filter-status sr-only" id="filter-status" role="status"></p>
+        <div class="feature-grid">
+          <button
+            class="feature-card feature-card-large"
+            type="button"
+            data-category="music"
+            data-story="amphitheatre"
+          >
+            <img
+              src="img/main2.webp"
+              alt="Сцена и зрительные ряды под сводами Летнего амфитеатра"
+              width="960"
+              height="640"
+              loading="lazy"
+            /><span class="card-tag">Сердце фестиваля</span
+            ><span class="card-caption"
+              ><small>МУЗЫКА · ВСТРЕЧИ · ЭМОЦИИ</small
+              ><strong>Летний амфитеатр</strong
+              ><span
+                >Место, где тысячи голосов звучат вместе
+                <b aria-hidden="true">↗</b></span
+              ></span
+            >
+          </button>
+          <button
+            class="feature-card"
+            type="button"
+            data-category="music"
+            data-story="concert"
+          >
+            <img
+              src="img/main6.webp"
+              alt="Фестивальная сцена с голубой световой инсталляцией"
+              width="960"
+              height="640"
+              loading="lazy"
+            /><span class="card-tag">На одной волне</span
+            ><span class="card-caption"
+              ><strong>Большая сцена</strong
+              ><span
+                >Музыка без перевода <b aria-hidden="true">↗</b></span
+              ></span
+            >
+          </button>
+          <button
+            class="feature-card"
+            type="button"
+            data-category="city"
+            data-story="city"
+          >
+            <img
+              src="img/main7.webp"
+              alt="Панорама Витебска с белой колокольней и улицами города"
+              width="960"
+              height="640"
+              loading="lazy"
+            /><span class="card-caption"
+              ><strong>Город вдохновения</strong
+              ><span
+                >Витебск за пределами сцены <b aria-hidden="true">↗</b></span
+              ></span
+            >
+          </button>
+          <button
+            class="feature-card"
+            type="button"
+            data-category="music"
+            data-story="voices"
+          >
+            <img
+              src="img/main5.webp"
+              alt="Певица и танцевальный коллектив на фестивальной сцене"
+              width="960"
+              height="640"
+              loading="lazy"
+            /><span class="card-caption"
+              ><strong>Новые голоса</strong
+              ><span
+                >Талант, который объединяет <b aria-hidden="true">↗</b></span
+              ></span
+            >
+          </button>
+          <button
+            class="feature-card"
+            type="button"
+            data-category="city"
+            data-story="symbols"
+          >
+            <img
+              src="img/main8.webp"
+              alt="Фестивальные сувениры с символикой Славянского базара"
+              width="960"
+              height="640"
+              loading="lazy"
+            /><span class="card-caption"
+              ><strong>Детали с характером</strong
+              ><span
+                >Символы и воспоминания <b aria-hidden="true">↗</b></span
+              ></span
+            >
+          </button>
+        </div>
+      </section>
+
+      <!-- Интерактивная хронология: вся информация доступна и без JavaScript. -->
+      <section
+        class="history-section"
+        id="history"
+        aria-labelledby="history-title"
+      >
+        <div class="container history-layout">
+          <div>
+            <p class="eyebrow">ОТ ПЕРВОГО АККОРДА</p>
+            <h2 id="history-title">История,<br />которая звучит.</h2>
+            <p class="section-description">
+              Меняются сцены и имена. Остаётся главное — желание услышать друг
+              друга.
+            </p>
+            <a
+              class="text-link"
+              href="https://fest-sbv.by/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Официальный сайт фестиваля ↗</a
+            >
+          </div>
+          <div class="timeline">
+            <details open>
+              <summary>
+                <span class="timeline-year">1992</span
+                ><span>Начало большой истории</span
+                ><span class="detail-plus" aria-hidden="true">+</span>
+              </summary>
+              <p>
+                Летом 1992 года в Витебске прошёл первый «Славянский базар».
+                Международный музыкальный фестиваль стал пространством встречи
+                разных культур.
+              </p>
+            </details>
+            <details>
+              <summary>
+                <span class="timeline-year">1995</span
+                ><span>Больше, чем музыка</span
+                ><span class="detail-plus" aria-hidden="true">+</span>
+              </summary>
+              <p>
+                «Славянский базар» получил название Международного фестиваля
+                искусств. Его культурная палитра объединила музыку, театр, кино
+                и выставочные проекты.
+              </p>
+            </details>
+            <details>
+              <summary>
+                <span class="timeline-year">2003</span
+                ><span>Время юных талантов</span
+                ><span class="detail-plus" aria-hidden="true">+</span>
+              </summary>
+              <p>
+                Впервые состоялся Международный детский музыкальный конкурс
+                «Витебск» — ещё одна возможность для молодых исполнителей выйти
+                на большую сцену.
+              </p>
+            </details>
+            <details>
+              <summary>
+                <span class="timeline-year">Сегодня</span
+                ><span>Город становится сценой</span
+                ><span class="detail-plus" aria-hidden="true">+</span>
+              </summary>
+              <p>
+                Концерты в Летнем амфитеатре, театральные встречи, выставки и
+                уличное искусство создают многоголосую атмосферу фестивального
+                Витебска.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section container"
+        id="gallery"
+        aria-labelledby="gallery-title"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">НЕ ПРОСТО ФОТОГРАФИИ — МОМЕНТЫ</p>
+            <h2 id="gallery-title">Увидеть. Почувствовать. Запомнить.</h2>
+          </div>
+          <div class="gallery-controls">
+            <button
+              class="round-button"
+              type="button"
+              id="gallery-prev"
+              aria-label="Предыдущие фотографии"
+            >
+              ←</button
+            ><button
+              class="round-button"
+              type="button"
+              id="gallery-next"
+              aria-label="Следующие фотографии"
+            >
+              →
+            </button>
+          </div>
+        </div>
+        <div
+          class="gallery-track"
+          id="gallery-track"
+          tabindex="0"
+          aria-label="Фотогалерея, прокручивайте или используйте кнопки со стрелками"
+        >
+          <button class="gallery-card" type="button" data-photo="0">
+            <span class="gallery-image"
+              ><img
+                src="img/main1.webp"
+                alt="Сцена Летнего амфитеатра перед концертом"
+                width="960"
+                height="640"
+                loading="lazy"
+              /><span>01 / СЦЕНА</span></span
+            ><strong>До первого аккорда</strong><small>Летний амфитеатр</small>
+          </button>
+          <button class="gallery-card" type="button" data-photo="1">
+            <span class="gallery-image"
+              ><img
+                src="img/main3.webp"
+                alt="Здание с вывеской Славянского базара в Витебске"
+                width="960"
+                height="640"
+                loading="lazy"
+              /><span>02 / ГОРОД</span></span
+            ><strong>Фестиваль начинается здесь</strong
+            ><small>Улицы Витебска</small>
+          </button>
+          <button class="gallery-card" type="button" data-photo="2">
+            <span class="gallery-image"
+              ><img
+                src="img/main5.webp"
+                alt="Концертный номер с певицей и танцорами"
+                width="960"
+                height="640"
+                loading="lazy"
+              /><span>03 / ЛЮДИ</span></span
+            ><strong>Искусство быть вместе</strong
+            ><small>Мгновения выступлений</small>
+          </button>
+          <button class="gallery-card" type="button" data-photo="3">
+            <span class="gallery-image"
+              ><img
+                src="img/main7.webp"
+                alt="Вид на исторический центр Витебска сверху"
+                width="960"
+                height="640"
+                loading="lazy"
+              /><span>04 / ВИТЕБСК</span></span
+            ><strong>Город с особым настроением</strong
+            ><small>Панорама Витебска</small>
+          </button>
+          <button class="gallery-card" type="button" data-photo="4">
+            <span class="gallery-image"
+              ><img
+                src="img/main6.webp"
+                alt="Световое оформление большой фестивальной сцены"
+                width="960"
+                height="640"
+                loading="lazy"
+              /><span>05 / СВЕТ</span></span
+            ><strong>Когда загорается сцена</strong
+            ><small>Вечерний концерт</small>
+          </button>
+        </div>
+        <p class="gallery-hint">
+          Нажмите на фотографию, чтобы рассмотреть её ближе
+          <span aria-hidden="true">↗</span>
+        </p>
+      </section>
+
+      <section class="container sound-section" aria-labelledby="sound-title">
+        <div class="record" aria-hidden="true">
+          <span>СБ<br /><small>ВИТЕБСК</small></span>
+        </div>
+        <div class="sound-copy">
+          <p class="eyebrow">У ФЕСТИВАЛЯ ЕСТЬ СВОЙ ГОЛОС</p>
+          <h2 id="sound-title">Включите настроение.</h2>
+          <p>
+            Гимн «Славянского базара» — музыкальное приглашение в атмосферу
+            фестиваля.
+          </p>
+          <audio controls preload="none" aria-label="Гимн Славянского базара">
+            <source src="audio/festival-anthem.mp3" type="audio/mpeg" />
+            Ваш браузер не поддерживает аудио.
+            <a href="audio/festival-anthem.mp3">Скачать запись</a>.
+          </audio>
+          <details class="audio-description">
+            <summary>О записи и текстовая альтернатива</summary>
+            <p>
+              Вокальная музыкальная запись гимна из исходного проекта. Смысловое
+              описание: фестивальная песня о встрече людей и объединяющей силе
+              искусства. Это описание, не дословная расшифровка. Авторство и
+              разрешение на публикацию необходимо уточнить перед конкурсной
+              сдачей.
+            </p>
+          </details>
+        </div>
+        <span class="sound-decoration" aria-hidden="true">♫</span>
+      </section>
+
+      <section
+        class="section container contact-section"
+        id="contact"
+        aria-labelledby="contact-title"
+      >
+        <div>
+          <p class="eyebrow">ПРОДОЛЖИМ ЗНАКОМСТВО?</p>
+          <h2 id="contact-title">У каждой встречи<br />есть начало.</h2>
+          <p class="section-description">
+            Хотите узнать больше об истории фестиваля или поделиться
+            воспоминанием? Оставьте свой вопрос.
+          </p>
+          <div class="contact-note">
+            <span aria-hidden="true">↗</span>
+            <p>
+              Это учебный проект, не официальный сайт фестиваля. Актуальную
+              программу и билеты ищите на
+              <a
+                href="https://fest-sbv.by/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >сайте организаторов</a
+              >.
+            </p>
+          </div>
+        </div>
+        <form id="contact-form" class="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name"
+                >Как к вам обращаться <span aria-hidden="true">*</span></label
+              ><input
+                id="name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                required
+                minlength="2"
+                maxlength="80"
+                placeholder="Ваше имя"
+                aria-describedby="name-error"
+              /><span class="field-error" id="name-error"></span>
+            </div>
+            <div class="form-field">
+              <label for="email"
+                >Электронная почта <span aria-hidden="true">*</span></label
+              ><input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+                maxlength="150"
+                placeholder="you@example.com"
+                aria-describedby="email-error"
+              /><span class="field-error" id="email-error"></span>
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="message"
+              >Ваш вопрос или воспоминание
+              <span aria-hidden="true">*</span></label
+            ><textarea
+              id="message"
+              name="message"
+              rows="4"
+              minlength="10"
+              maxlength="2000"
+              required
+              placeholder="С чего началась ваша история с фестивалем?"
+              aria-describedby="message-error"
+            ></textarea
+            ><span class="field-error" id="message-error"></span>
+          </div>
+          <label class="consent"
+            ><input
+              type="checkbox"
+              id="consent"
+              required
+              aria-describedby="consent-error"
+            /><span
+              >Я понимаю, что это демонстрационная форма: данные не отправляются
+              и не сохраняются.</span
+            ></label
+          ><span class="field-error" id="consent-error"></span
+          ><button class="button" type="submit">
+            Проверить сообщение <span aria-hidden="true">↗</span>
+          </button>
+          <p class="form-status" id="form-status" role="status"></p>
+          <noscript
+            >Для интерактивной проверки формы включите JavaScript. Отправка на
+            сервер не предусмотрена.</noscript
+          >
+        </form>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container footer-main">
+        <div>
+          <a class="brand" href="#top"
+            ><img src="img/flower.svg" alt="" width="34" height="34" /><span
+              >Славянский<span class="brand-bottom"
+                >базар<span class="brand-dot">.</span></span
+              ></span
+            ></a
+          >
+          <p>Искусство объединяет.<br />Витебск встречает.</p>
+        </div>
+        <div>
+          <strong>Исследуйте</strong><a href="#history">История фестиваля</a
+          ><a href="#gallery">Фотогалерея</a
+          ><a href="#contact">Обратная связь</a>
+        </div>
+        <div class="sources">
+          <strong>Об источниках</strong>
+          <p>
+            Фото и аудио перенесены из предоставленного проекта. На фотографиях
+            сохранены водяные знаки авторов.
+          </p>
+          <a
+            href="https://fest-sbv.by/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Факты о фестивале: официальный сайт ↗</a
+          ><a href="SOURCES.md">Атрибуция и сведения о материалах ↗</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <span>© 2026 · Учебный проект «Славянский базар в Витебске»</span
+          ><a href="#top">Наверх ↑</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Один диалог для карточек и полноэкранной фотогалереи. -->
+    <dialog id="detail-dialog" aria-labelledby="dialog-title">
+      <button
+        class="dialog-close round-button"
+        type="button"
+        aria-label="Закрыть окно"
+      >
+        ×</button
+      ><img id="dialog-image" src="img/main2.webp" alt="" />
+      <div class="dialog-content">
+        <p class="eyebrow" id="dialog-kicker"></p>
+        <h2 id="dialog-title">О фестивале</h2>
+        <p id="dialog-text"></p>
+        <div class="dialog-photo-controls" hidden>
+          <button
+            class="round-button"
+            type="button"
+            id="photo-prev"
+            aria-label="Предыдущая фотография"
+          >
+            ←</button
+          ><span id="photo-count" aria-live="polite"></span
+          ><button
+            class="round-button"
+            type="button"
+            id="photo-next"
+            aria-label="Следующая фотография"
+          >
+            →
+          </button>
+        </div>
+      </div>
+    </dialog>
+  </body>
+</html>
